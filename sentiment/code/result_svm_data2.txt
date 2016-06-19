@@ -1,0 +1,37 @@
+Creating Unigram Model.......
+Unigram Model Created
+Creating Bigram Model.......
+Bigram Model Created
+Creating Trigram Model.......
+Trigram Model Created
+Creating Feature Vectors.....
+Feature Vectors Train Created.....
+Feature Vectors of test input created. Calculating Accuracy...
+Creating SVM Model
+.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 1533
+nu = 0.450607
+obj = -1805.888825, rho = -0.887748
+nSV = 1954, nBSV = 1887
+..
+WARNING: using -h 0 may be faster
+*.*
+optimization finished, #iter = 3405
+nu = 0.619158
+obj = -4061.361725, rho = -1.350700
+nSV = 4384, nBSV = 4298
+.
+WARNING: using -h 0 may be faster
+*.*
+optimization finished, #iter = 2120
+nu = 0.431216
+obj = -2143.342335, rho = -0.115284
+nSV = 2264, nBSV = 2187
+Total nSV = 5981
+Model created. Saving...
+Model Saved. Proceed to test...
+Accuracy = 57.5899% (1730/3004) (classification)
+Finished. The accuracy is:
+57.5898801598
