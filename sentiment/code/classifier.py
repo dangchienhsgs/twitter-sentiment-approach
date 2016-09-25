@@ -1,4 +1,5 @@
 from svmutil import *
+import random
 from sklearn.naive_bayes import GaussianNB
 from sklearn.naive_bayes import BernoulliNB
 
@@ -18,6 +19,31 @@ def svm_classifier(training_label, testing_label, train_vectors, test_vectors):
     print predictedAcc[0]
     return predictedLabel
 
+
+def svm_classifier_predict(training_label, train_vectors, test_vectors):
+    """Feed the feature vector to svm to create model"""
+    print "Creating SVM Model"
+    model = svm_train(training_label, train_vectors)
+    print "Model created. Saving..."
+
+    """Save model"""
+    svm_save_model('.//code//sentimentAnalysisSVM.model', model)
+    print "Model Saved. Proceed to test..."
+
+    testing_label = gen_random_label(len(test_vectors))
+    predictedLabel, predictedAcc, predictedValue = svm_predict(testing_label, test_vectors, model)
+
+    return predictedLabel
+
+
+def gen_random_label(size):
+    labels = []
+
+    for i in range(size):
+        t = random.randint(0, 3)
+        labels.append(t)
+
+    return labels
 
 def naivebayes_gaussian_classifier(training_label, testing_label, train_vectors, test_vectors):
     print "Create NaiveBayes Gaussian Model"
@@ -47,3 +73,5 @@ def naivebayes_bernouli_classifier(training_label, testing_label, train_vectors,
 
     print "Accuracy {0}".format(numTrue * 1.0 / len(testing_label))
     return predict_label
+
+

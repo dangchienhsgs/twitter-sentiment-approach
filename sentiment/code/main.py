@@ -180,6 +180,10 @@ if __name__ == '__main__':
     elif method == "nb_bernouli":
         predictedLabel = naivebayes_bernouli_classifier(trainingLabel, testingLabel, featureVectorsTrain,
                                                         featureVectorsTest)
+    elif method == "svm_predict":
+        predictedLabel = svm_classifier_predict(trainingLabel, featureVectorsTrain, featureVectorsTest)
+        print predictedLabel
+
     else:
         print "Method {0} is not support".format(method)
 
