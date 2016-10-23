@@ -56,7 +56,7 @@ def naivebayes_gaussian_classifier(training_label, testing_label, train_vectors,
         if predict_label[i] == testing_label[i]:
             num_true += 1
 
-    print "Accuracy {0}".format(num_true * 1.0 / len(testing_label))
+    print "Accuracy {0}".format(num_true * 1.0 / len(testing_label) * 100)
     return predict_label
 
 
@@ -71,7 +71,7 @@ def naivebayes_bernouli_classifier(training_label, testing_label, train_vectors,
         if predict_label[i] == testing_label[i]:
             numTrue += 1
 
-    print "Accuracy {0}".format(numTrue * 1.0 / len(testing_label))
+    print "Accuracy {0}".format(numTrue * 1.0 / len(testing_label) * 100)
     return predict_label
 
 
