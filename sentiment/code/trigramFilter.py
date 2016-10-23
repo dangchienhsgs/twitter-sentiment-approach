@@ -72,7 +72,7 @@ if __name__ == '__main__':
             pos = triDict[i][positive] / count
             neg = triDict[i][negative] / count
             neu = triDict[i][neutral] / count
-            if pos > 0.8 or neg > 0.8 or neu > 0.8:
+            if pos > 0.7 or neg > 0.7 or neu > 0.7:
                 l = [i, pos, neg, neu, count]
                 triModel.append(l)
 

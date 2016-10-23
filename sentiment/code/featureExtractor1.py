@@ -185,7 +185,7 @@ def countPosTag(tweet, token, score):
         if word:
             if token[i] in count:
                 count[token[i]] += 1
-            """
+            """           
             for phrase in score.keys():
                 if word.issubset(phrase):
                     word=''.join(list(word))
@@ -219,14 +219,14 @@ def findFeatures(tweet, token, polarityDictionary, stopWords, emoticonsDict, acr
     featureVector = []
     featureVector.extend(findTotalScore(score))
     tweet, token = preprocesingTweet2(tweet, token, stopWords)
-    featureVector.extend(findCapitalised(tweet, token, score))
+    #featureVector.extend(findCapitalised(tweet, token, score))
     featureVector.extend(findHashtag(tweet, token, score))
     featureVector.extend(findEmoticons(tweet, token))
     featureVector.extend(findNegation(tweet))
     featureVector.extend(findPositiveNegativeWords(tweet, token, score))
     featureVector.extend(findUrl(tweet, token))
     featureVector.extend([count1])  # number of acronym
-    featureVector.extend([count2])  # number of words which had repeation
+    featureVector.extend([count2])  # number of words which had repetion
     featureVector.extend(countSpecialChar(tweet, score))  # number of  special char
     featureVector.extend(countPosTag(tweet, token, score))
     return featureVector, polarityDictionary

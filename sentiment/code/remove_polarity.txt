@@ -1,0 +1,62 @@
+Twitter
+Creating Unigram Model.......
+Unigram Model Created
+Creating Bigram Model.......
+Bigram Model Created
+Creating Trigram Model.......
+Trigram Model Created
+Creating Feature Vectors.....
+Feature Vectors Train Created.....
+Feature Vectors of test input created. Calculating Accuracy...
+Creating SVM Model
+.....
+WARNING: using -h 0 may be faster
+*.*
+optimization finished, #iter = 6092
+nu = 0.765179
+obj = -9637.344117, rho = 0.305697
+nSV = 10033, nBSV = 9951
+Total nSV = 10033
+Model created. Saving...
+Model Saved. Proceed to test...
+Accuracy = 61.886% (2041/3298) (classification)
+Finished. The accuracy is:
+61.88599151
+
+
+
+Google
+Creating Unigram Model.......
+Unigram Model Created
+Creating Bigram Model.......
+Bigram Model Created
+Creating Trigram Model.......
+Trigram Model Created
+Creating Feature Vectors.....
+Feature Vectors Train Created.....
+Feature Vectors of test input created. Calculating Accuracy...
+Creating SVM Model
+*
+optimization finished, #iter = 318
+nu = 0.507380
+obj = -289.977582, rho = -0.520808
+nSV = 331, nBSV = 299
+*.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 928
+nu = 0.189349
+obj = -95.161021, rho = -0.998770
+nSV = 149, nBSV = 66
+*
+optimization finished, #iter = 184
+nu = 0.454976
+obj = -92.440924, rho = -0.767909
+nSV = 110, nBSV = 82
+Total nSV = 436
+Model created. Saving...
+Model Saved. Proceed to test...
+Accuracy = 74.4048% (124/168) (classification)
+Finished. The accuracy is:
+74.4047619048
+
